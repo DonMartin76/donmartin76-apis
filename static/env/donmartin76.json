@@ -1,0 +1,24 @@
+{
+  "GITHUB_CLIENTID": {
+    "value": "4ad874bff6c4413df86b84dd90edaed486340c46b14fcbb744565217b1ad5c7a8945e340426515ea48611f27cadb98460e5ee56fed63548338f6e799",
+    "encrypted": true
+  },
+  "GITHUB_CLIENTSECRET": {
+    "value": "4fd525e9f0c34d6bfc3d8a81c3b9fa8fd13e0a11b919cae7115f5a19b5fc5a23da19e81810661ebe4d3211249dd89f405556eb3deb6202803ff0e3c472226a06be0b60e2a951704cb06dd2627acfb554",
+    "encrypted": true
+  },
+  "GOOGLE_CLIENTID": {
+    "value": "11df75e8a0954e38f93f8482c0bea9d786630d45e14398e7160c534bb5ff0b21d41ae74c11614bb84e661f22c5899e485f56e935f03b5ec478aebdd477637906bc5e66a7fb073d13bc3cc23522c8e15e3d866ae8d94d55bcc64482ded92bba5f4ed378229cb2b0965915d3ce84fa627e",
+    "encrypted": true
+  },
+  "GOOGLE_CLIENTSECRET": {
+    "value": "18db70bcf0911c3ef964d9d0c3e1fcd583620f45e34d9ae647575e4fe7ae087bda19e24b13661bba4f685e78ccd5c602351fb33d8d1b22d85289a7d729554649",
+    "encrypted": true
+  },
+  "PORTAL_NETWORK_APIHOST": {
+    "value": "api.donmartin76.com"
+  },
+  "PORTAL_NETWORK_PORTALHOST": {
+    "value": "portal.donmartin76.com"
+  }
+}

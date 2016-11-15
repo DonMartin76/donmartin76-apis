@@ -1,0 +1,22 @@
+{
+  "ipconfig": 3,
+  "ssl": 1,
+  "users": 3,
+  "auth": 3,
+  "groups": 0,
+  "plans": 3,
+  "apis": 3,
+  "recaptcha": 2,
+  "content": 0,
+  "email": 0,
+  "chatbot": 0,
+  "templates": 0,
+  "design": 3,
+  "envs": [
+    "default",
+    "localhost",
+    "donmartin76"
+  ],
+  "env": 3,
+  "deploy": 3
+}

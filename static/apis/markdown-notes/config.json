@@ -1,0 +1,28 @@
+{
+  "api": {
+    "name": "markdown-notes",
+    "upstream_url": "https://api.markdown-notes.donmartin76.com",
+    "request_path": "/markdown-notes/v1",
+    "strip_request_path": true
+  },
+  "plugins": [
+    {
+      "config": {
+        "origin": "*",
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+      },
+      "name": "cors"
+    },
+    {
+      "name": "request-transformer",
+      "config": {
+        "add": {
+          "headers": [
+            "%%Forwarded",
+            "$PORTAL_APIS_MARKDOWN_NOTES_BASICAUTH"
+          ]
+        }
+      }
+    }
+  ]
+}

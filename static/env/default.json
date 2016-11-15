@@ -1,0 +1,70 @@
+{
+  "GITHUB_CLIENTID": {
+    "value": "4fdb7cb9a0c6486bac6484dd90eba985d3645d41e31898e3145f0f48e2fe5e74d41fe81c47301cef163450338cc8c2000815a874",
+    "encrypted": true
+  },
+  "GITHUB_CLIENTSECRET": {
+    "value": "1b8820b8a6964d30fe68ddd594edafd4d2350c17b91fccb6480f0e4debae597bdb4de11a11674ce4163450338cc8c2000815a874",
+    "encrypted": true
+  },
+  "GOOGLE_CLIENTID": {
+    "value": "1d8f72e9a6971a68fc6b84d4c5eeac84d5670b41b119c8e1460c5b48e0f85a24d54be24e10371fec163450338cc8c2000815a874",
+    "encrypted": true
+  },
+  "GOOGLE_CLIENTSECRET": {
+    "value": "1cde70eea3c1493af93ed98091bba9d3d73f5910b04f98e348085a4bb7fc0b218f45e64f416b4fee163450338cc8c2000815a874",
+    "encrypted": true
+  },
+  "PORTAL_APIS_MARKDOWN_NOTES_BASICAUTH": {
+    "value": "4fde72b8f2c31939fd6489d794bdaf81833f084db44dcdb6400f5b4cb7ab5a758e19b51b436a4fef3924537b93c8c40a0c13b562b36c25d178a9b481274e4608e95265bcf8601d4ce613f27a2c99b21031d94db1",
+    "encrypted": true
+  },
+  "PORTAL_API_AESKEY": {
+    "value": "48d471bbf095493aaa6a898590bcab8383625844b91e9eeb470c0818e1a95975dd18e41a436018e94e35172bcd8f95430f52ba3ae965018233a1e09625736d54eb0a62e5f8562d4eb0658263779bb200",
+    "encrypted": true
+  },
+  "PORTAL_API_DYNAMIC_CONFIG": {
+    "value": "${PORTAL_CONFIG_BASE}dynamic"
+  },
+  "PORTAL_API_STATIC_CONFIG": {
+    "value": "${PORTAL_CONFIG_BASE}static"
+  },
+  "PORTAL_API_URL": {
+    "value": "http://portal-api:3001"
+  },
+  "PORTAL_AUTH_GITHUB_CLIENTID": {
+    "value": "1ed471b8a5924b3bf83edd8695eff9d0d6345f4de54d99e642085e1db6a901218f18e01f413114e941321424cb88c8455853bd6fbc3356d43bf0b6c4",
+    "encrypted": true
+  },
+  "PORTAL_AUTH_GITHUB_CLIENTSECRET": {
+    "value": "10dc7de8f1c44a6baa6e8ad694e1a88185360a40b74b9fb045580f1de6ae0123d549b71a133148ef49341475ce889f41585eed38ea60058468f6ef9377753b06be0f63b5f9517b4fb135d63776cbb25f",
+    "encrypted": true
+  },
+  "PORTAL_CHATBOT_URL": {
+    "value": "http://portal-api:3004"
+  },
+  "PORTAL_CONFIG_BASE": {
+    "value": "/var/portal-api/"
+  },
+  "PORTAL_KONG_ADAPTER_URL": {
+    "value": "http://portal-kong-adapter:3002"
+  },
+  "PORTAL_KONG_ADMIN_URL": {
+    "value": "http://kong:8001"
+  },
+  "PORTAL_MAILER_URL": {
+    "value": "http://portal-mailer:3003"
+  },
+  "PORTAL_NETWORK_APIHOST": {
+    "value": "api.local.com"
+  },
+  "PORTAL_NETWORK_PORTALHOST": {
+    "value": "portal.local.com"
+  },
+  "PORTAL_NETWORK_SCHEMA": {
+    "value": "https"
+  },
+  "PORTAL_PORTAL_URL": {
+    "value": "http://portal:3000"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "auth-passport",
+  "name": "auth-passport",
+  "desc": "Authorization Server for Github Login",
+  "url": "https://${PORTAL_NETWORK_APIHOST}/auth-passport/github/api/{{apiId}}?client_id=(your app's client id)",
+  "config": {
+    "api": {
+      "name": "auth-passport",
+      "upstream_url": "http://auth-passport:3010",
+      "request_path": "/auth-passport"
+    },
+    "plugins": [
+      {
+        "config": {
+          "header_name": "Correlation-Id",
+          "generator": "uuid"
+        },
+        "name": "correlation-id"
+      }
+    ]
+  },
+  "urlDescription": "Authorization Server; redirect to the URL above, replacing your client ID and the `(idp)` with the correct value. You will be called back with the access token in the fragment `#`, in case everything was successful.",
+  "github": {
+    "clientId": "${GITHUB_CLIENTID}",
+    "clientSecret": "${GITHUB_CLIENTSECRET}",
+    "callbackUrl": "https://${PORTAL_NETWORK_APIHOST}/auth-passport/github/callback"
+  },
+  "google": {
+    "clientId": "${GOOGLE_CLIENTID}",
+    "clientSecret": "${GOOGLE_CLIENTSECRET}",
+    "callbackUrl": "https://${PORTAL_NETWORK_APIHOST}/auth-passport/google/callback"
+  }
+}
