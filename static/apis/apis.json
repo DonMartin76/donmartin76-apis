@@ -43,7 +43,8 @@
         "scopes": ""
       },
       "authServers": [
-        "auth-passport"
+        "auth-passport",
+        "auth-saml"
       ],
       "tags": [],
       "requiredGroup": "dev",

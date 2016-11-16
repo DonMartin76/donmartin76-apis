@@ -1,0 +1,47 @@
+{
+  "id": "auth-saml",
+  "name": "auth-saml",
+  "desc": "Authorize with Haufe Web SSO (SAML)",
+  "url": "https://${PORTAL_NETWORK_APIHOST}/auth-saml/api/{{apiId}}?client_id=(your app's client id)",
+  "config": {
+    "api": {
+      "name": "auth-saml",
+      "upstream_url": "http://auth-saml:3011",
+      "request_path": "/auth-saml"
+    },
+    "plugins": [
+      {
+        "config": {
+          "header_name": "Correlation-Id",
+          "generator": "uuid"
+        },
+        "name": "correlation-id"
+      }
+    ]
+  },
+  "urlDescription": "Redirect your application to the above URL, specifying your `client_id`. You will get called back with an `access_token` in the fragment of your application's callback URI.",
+  "saml": {
+    "profile": {
+      "authenticated_userid": "saml:{{{hmguserid}}}",
+      "username": "haufe_user_{{{huid}}}",
+      "first_name": "{{{firstname}}}",
+      "last_name": "{{{lastname}}}",
+      "full_name": "{{{firstname}}} {{{lastname}}}",
+      "email": "{{{email}}}",
+      "company": ""
+    },
+    "spOptions": {
+      "entity_id": "https://${PORTAL_NETWORK_APIHOST}/auth-saml/metadata.xml",
+      "assert_endpoint": "https://${PORTAL_NETWORK_APIHOST}/auth-saml/assert",
+      "nameid_format": "urn:oasis:names:tc:SAML:2.0:nameid-format:transient",
+      "certificate": "${SAML_SP_CERTIFICATE}",
+      "private_key": "${SAML_SP_PRIVATE_KEY}"
+    },
+    "idpOptions": {
+      "sso_login_url": "${SAML_IDP_LOGIN_URL}",
+      "certificates": [
+        "${SAML_IDP_CERTIFICATE}"
+      ]
+    }
+  }
+}

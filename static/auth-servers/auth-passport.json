@@ -2,7 +2,7 @@
   "id": "auth-passport",
   "name": "auth-passport",
   "desc": "Authorization Server for Github Login",
-  "url": "https://${PORTAL_NETWORK_APIHOST}/auth-passport/github/api/{{apiId}}?client_id=(your app's client id)",
+  "url": "https://${PORTAL_NETWORK_APIHOST}/auth-passport/<idp>/api/{{apiId}}?client_id=(your app's client id)",
   "config": {
     "api": {
       "name": "auth-passport",
@@ -19,7 +19,7 @@
       }
     ]
   },
-  "urlDescription": "Authorization Server; redirect to the URL above, replacing your client ID and the `(idp)` with the correct value. You will be called back with the access token in the fragment `#`, in case everything was successful.",
+  "urlDescription": "Authorization Server; redirect to the URL above, replacing your client ID and the `<idp>` with the correct value. You will be called back with the access token in the fragment `#`, in case everything was successful. Supported `<idp>` values are `github` and `google`.",
   "github": {
     "clientId": "${GITHUB_CLIENTID}",
     "clientSecret": "${GITHUB_CLIENTSECRET}",

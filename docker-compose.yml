@@ -94,14 +94,6 @@ services:
     restart: unless-stopped
     command: "npm start"
 
-  portal-mailer:
-    env_file: variables.env  
-    image: haufelexware/wicked.portal-mailer:next
-    restart: unless-stopped
-    depends_on:
-    - "portal-api"
-    command: "npm start"
-
   auth-passport:
     image: haufelexware/wicked.auth-passport:dev
     depends_on:
@@ -113,6 +105,25 @@ services:
     - "AUTH_SERVER_NAME=auth-passport"
     - "DEBUG=*"    
     restart: unless-stopped
+
+  auth-saml:
+    env_file: variables.env
+    image: haufelexware/wicked.auth-saml:dev
+    depends_on:
+    - portal-api
+    - portal-kong-adapter
+    command: "npm start"
+    environment:
+    - "DEBUG=*"
+    restart: unless-stopped
+
+#  portal-mailer:
+#    env_file: variables.env  
+#    image: haufelexware/wicked.portal-mailer:next
+#    restart: unless-stopped
+#    depends_on:
+#    - "portal-api"
+#    command: "npm start"
 
 #  portal-chatbot:
 #    env_file: variables.env  
