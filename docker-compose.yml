@@ -72,6 +72,12 @@ services:
     - "portal-api-data-dynamic"
     restart: unless-stopped
 
+  portal-sessions:
+    image: haufelexware/wicked.portal:next
+    volumes:
+    - "/usr/src/app/sessions"
+    command: "/bin/true"
+
   portal:
     env_file: variables.env  
     image: haufelexware/wicked.portal:next
@@ -83,6 +89,8 @@ services:
     - "VIRTUAL_HOST=https://${PORTAL_NETWORK_PORTALHOST}:443"
     - "VIRTUAL_HOST_WEIGHT=0"
     - "SSL_CERT=${PORTAL_PEM}"
+    volumes_from:
+    - "portal-sessions"
     command: "npm start"
     restart: unless-stopped
 
