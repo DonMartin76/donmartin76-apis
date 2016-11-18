@@ -47,7 +47,8 @@ services:
     - "EXCLUDE_PORTS=7946,8001,8443"
     - "EXTRA_SETTINGS=http-request set-header X-Forwarded-Port %[dst_port]"
     - "SSL_CERT=${GATEWAY_PEM}"
-    command: "dockerize -timeout 30s -wait tcp://kong-database:5432 kong start"
+#    - "PROXY_SSL_CERT=${PROXY_SSL_CERT}"
+#    - "PROXY_SSL_KEY=${PROXY_SSL_KEY}"
     restart: unless-stopped
 
   portal-api-data-static:
@@ -94,41 +95,3 @@ services:
     restart: unless-stopped
     command: "npm start"
 
-  auth-passport:
-    image: haufelexware/wicked.auth-passport:dev
-    depends_on:
-    - portal-api
-    - portal-kong-adapter
-    command: "npm start"
-    environment:
-    - "AUTH_SERVER_BASEPATH=/auth-passport"
-    - "AUTH_SERVER_NAME=auth-passport"
-    - "DEBUG=*"    
-    restart: unless-stopped
-
-  auth-saml:
-    env_file: variables.env
-    image: haufelexware/wicked.auth-saml:dev
-    depends_on:
-    - portal-api
-    - portal-kong-adapter
-    command: "npm start"
-    environment:
-    - "DEBUG=*"
-    restart: unless-stopped
-
-#  portal-mailer:
-#    env_file: variables.env  
-#    image: haufelexware/wicked.portal-mailer:next
-#    restart: unless-stopped
-#    depends_on:
-#    - "portal-api"
-#    command: "npm start"
-
-#  portal-chatbot:
-#    env_file: variables.env  
-#    image: haufelexware/wicked.portal-chatbot:latest
-#    restart: unless-stopped
-#    depends_on:
-#    - "portal-api"
-#    command: "npm start"

@@ -26,7 +26,16 @@
       "firstName": "Admin",
       "lastName": "User",
       "email": "admin@foo.com",
-      "password": "wicked",
+      "groups": [
+        "admin"
+      ]
+    },
+    {
+      "id": "2",
+      "firstName": "Martin",
+      "lastName": "Danielsson",
+      "email": "martin@danielsson.de",
+      "customId": "Github:7326883",
       "groups": [
         "admin"
       ]
