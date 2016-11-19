@@ -103,3 +103,23 @@ services:
     restart: unless-stopped
     command: "npm start"
 
+  auth-passport:
+    image: haufelexware/wicked.auth-passport:dev
+    depends_on:
+    - portal-api
+    - portal-kong-adapter
+    command: "npm start"
+    environment:
+    - "AUTH_SERVER_BASEPATH=/auth-passport"
+    - "AUTH_SERVER_NAME=auth-passport"
+    restart: unless-stopped
+
+  auth-saml:
+    env_file: variables.env
+    image: haufelexware/wicked.auth-saml:dev
+    depends_on:
+    - portal-api
+    - portal-kong-adapter
+    command: "npm start"
+    restart: unless-stopped
+

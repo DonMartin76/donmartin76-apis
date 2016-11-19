@@ -31,6 +31,26 @@
         "basic",
         "unlimited"
       ]
+    },
+    {
+      "id": "markdown-notes",
+      "name": "Markdown Notes",
+      "desc": "Markdown Notes",
+      "auth": "oauth2",
+      "settings": {
+        "enable_implicit_grant": true,
+        "token_expiration": "3600",
+        "scopes": ""
+      },
+      "authServers": [
+        "auth-passport",
+        "auth-saml"
+      ],
+      "tags": [],
+      "plans": [
+        "basic",
+        "unlimited"
+      ]
     }
   ],
   "_links": {
